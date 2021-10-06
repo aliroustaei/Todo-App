@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color1: #091921;
+  --color2: rgba(58, 58, 58, 0.5);
+  --color3: #0a1318;
+}
+
+.light-Theme {
+  --color1: #fff !important;
+  --color2: rgba(36, 36, 36, 0.125);
+  --color3: #fff;
+}
+
+/*******---- title --**********/
+
+.title {
+  background: linear-gradient(
+      170deg,
+      rgba(20, 137, 204, 0.8),
+      rgba(43, 50, 178, 0.8)
+    ),
+    url(./img/laptop-1209008.jpg) 50% no-repeat;
+  background-size: cover;
+  padding: 5rem;
+  letter-spacing: 15px;
+}
+
+h1 {
+  color: #fdfdfd;
+}
+
+/****---- todo -----****/
+.todo-body {
+  background-color: var(--color3);
+  min-height: 80vh;
+  transition: background-color 0.3s;
+}
+
+.todo-box {
+  margin-top: -5rem;
+  background-color: var(--color1);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+}
+
+.list-group-item {
+  background-color: var(--color1);
+  transition: background-color 0.3s;
+  border: 1px solid var(--color2);
+  border-left: none;
+  border-right: none;
+  color: #626262 !important;
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.btn-success {
+  background-color: #2b32b2;
+  border-color: #2b32b2;
+  transition: all 0.3s;
+}
+
+.btn-success:hover {
+  transform: translateY(-5px);
+  background-color: #21279f;
+  border-color: #21279f;
+}
+
+.btn-success:focus {
+  background-color: #21279f;
+  border-color: #21279f;
+}
+
+.btn-primary {
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+}
+
+.list-group img {
+  height: 1rem;
+  width: 1rem;
+  margin-top: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+.list-group span {
+  cursor: pointer;
+}
+
+/**********------ dark btn------************/
+
+.dark-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1f1f1f;
+  width: 45px;
+  padding: 2px 3px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  transition: padding-left 0.5s, background-color 0.5s;
+}
+
+.dark-btn span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.dark-btn div {
+  background-image: url("img/moon.svg");
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: background-image 0.3s;
+}
+
+.dark-btn-on {
+  padding-left: 23px;
+  background-color: #ccc;
+}
+
+.dark-btn-on div {
+  background-image: url("img/sun.svg");
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background: linear-gradient(
+        40deg,
+        rgba(20, 137, 204, 0.3),
+        rgba(43, 50, 178, 0.4)
+      )
+      no-repeat;
+    min-height: 100vh;
+  }
+
+  .title {
+    padding: 5rem 0rem;
+  }
+
+  .todo-box {
+    padding: 1rem;
+  }
+}
